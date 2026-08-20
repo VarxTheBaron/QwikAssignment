@@ -1,65 +1,83 @@
-# Qwik City App ⚡️
+# Skolprojekt: webapp i Qwik
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+**Namn:** Jonas Persson
+**Kurs:** Webbutveckling
+**Valt ramverk:** Qwik
+**Repository:** Länk kommer
+
+## Om detta projekt
+Detta är en enkelt webbapplikation byggd med **Qwik**. Appen är skapad som en del av kursen Webbutveckling där syftet är att lära sig om ett valfritt modernt frontend-ramverk.
 
 ---
 
-## Project Structure
+## Uppgiftsbeskrivning (Instruktioner)
+*Nedanstående text är hämtad från uppgiftsbeskrivningen.*
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+# Frontend ramverk
 
-Inside your project, you'll see the following directory structure:
+Inspirerad ifrån [stateofjs](https://stateofjs.com) där du som student väljer ett av de listade ramverken och skapar en valfri enklare sida med det valda ramverket.
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+## Installation & Utveckling
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
+Skapa ett projekt med önskat ramverk exempelvis med hjälp av: `npm init vite@latest` och följ instruktionerna. Håll det enkelt men vill du använda typescript istället för javascript så kan det vara en bra idé.
 
-- `src/components`: Recommended directory for components.
+Kör `npm install` för att installera modulerna för projektet när du är klar. Därefter startar du din utvecklingsserver med `npm run dev`.
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+Tänk på att installera ev VSCode tillägg för ditt ramverk så du får korrekt syntax highlighting.
 
-## Add Integrations and deployment
+## Uppgiftsbeskrivning
 
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
+Utöver att en bygga en hemsida utifrån bilden ovan i det valda ramverket ska du också hålla en muntlig presentation om ramverket. Den muntliga presentationen skall hållas med hjälp av ett presentationsverktyg och vara ca 10-15 minuter lång. Du ska i din presentation visa vad du har byggt. Fokus ska läggas på att beskriva vad du har lärt dig om ramverket, hur det används, vem som har skapat det, mm. Saker som bör tas upp i presentationen är: syntax, databindning, tillståndshantering, mm. men även kort om community, dokumentation och framtid.
 
-```shell
-npm run qwik add # or `yarn qwik add`
-```
+Här är en lista på de delar du ska välja att använda i din projekt För G. Minst 4 av 7 delar.
 
-## Development
+- [ ] Databindning
+- [ ] Villkorlig rendering
+- [ ] Loop rendering
+- [ ] Klass- och stilbindning
+- [ ] Tillståndshantering
+- [ ] Eventhantering
+- [ ] Komponenter
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+För VG ska du använda samtliga ovan och även lägga till routing i projektet.
 
-```shell
-npm start # or `yarn start`
-```
+- [ ] Klient-routing
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+OBS: Du ska ha med samtliga punkter i din presentation och förklara hur du har använt det och hur det fungerar.
 
-## Preview
+## Inlämning & Presentation
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+Kodprojektet ska zippas ihop och lämnas in på läroplattformen. Presentationen ska exporteras till PDF och också lämnas in.
 
-```shell
-npm run preview # or `yarn preview`
-```
+Presentation kommer att ske i mindre grupper on ca. 4 person där du har en kort demo på ditt projekt och går igenom de delar som du har använt ifrån ramverket du valt, se listan längre upp. Du ska med små kodexempel från din egna kod kunna förklara vad du har använt och hur det fungerar. Vill du lägga till ytterligare exempel för fördjupad förklaring går det också bra.
 
-## Production
+Tiden för presentationen bör se ut ungefär såhär:
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+- Demo (2min)
+- Intro till ramverk (2min)
+- Hur det tekniskt fungerar (6min)
+- Avslut (1min)
+- Frågor (2min)
 
-```shell
-npm run build # or `yarn build`
-```
+Totalt: ca 10-15 min.
+
+**Inlämningen skall alltså bestå av en zippad mapp och en PDF.**
+
+### Krav för Godkänt
+
+- [ ] Uppgiften har lämnats in i tid (Kod & Presentation).
+- [ ] Koden innehåller en renskriven Readmefil.
+- [ ] Git och GitHub har använts (med regelbunda commits).
+- [ ] Sidan innehåller semantisk HTML och är responsiv.
+- [ ] Minst fyra av de sju punkterna från listan ovan har används i din kod
+- [ ] Under "Hur det tekniskt fungerar" i din presentation förklarar du de delar du använt.
+
+_Gjorda krav ska kryssas för._
+
+### Krav för Väl Godkänt
+
+- [ ] Samtliga punkter ifrån listan ovan används inklusive klient-routing.
+- [ ] Under "Hur det tekniskt fungerar" i din presentation förklarar du alla delarna.
+- [ ] Under presentationstillfället ska du vara med och ställa frågor om det presenterade ramverken.
+
+_Gjorda krav ska kryssas för._

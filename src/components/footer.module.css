@@ -1,0 +1,8 @@
+.footer_container {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25) inset;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto 0 auto;
+}

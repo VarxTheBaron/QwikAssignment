@@ -3,8 +3,8 @@ import styles from "./footer.module.css";
 
 export default component$(() => {
   return (
-    <footer class={styles.footer_container}>
-      <ul class={styles.footer_list}>
+    <footer class={styles.footerContainer}>
+      <ul class={styles.footerList}>
         {FooterItem("All images are AI generated.")}
         {FooterItem("© Jonas Persson 2026")}
       </ul>
@@ -13,5 +13,5 @@ export default component$(() => {
 });
 
 export const FooterItem = (text: string) => {
-  return <li class={styles.footer_item}>{text}</li>;
+  return <li class={styles.footerItem}>{text}</li>;
 };

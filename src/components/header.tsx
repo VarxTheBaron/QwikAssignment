@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
+import styles from "./header.module.css";
 
 export default component$(() => {
-  return <header>header text</header>;
+  return <header class={styles.headerContainer}>header text</header>;
 });

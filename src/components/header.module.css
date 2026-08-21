@@ -1,0 +1,5 @@
+.headerContainer {
+    border-bottom: 1px solid var(--primaryBorderColor);
+    position: sticky;
+    top: 0;
+}

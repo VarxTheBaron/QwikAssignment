@@ -5,14 +5,14 @@ export default component$(() => {
   return (
     <footer class={styles.footerContainer}>
       <ul class={styles.footerList}>
-        {FooterItem("All images are AI generated.")}
-        {FooterItem("© Jonas Persson 2026")}
-        <a href="/about">{FooterItem("About this page")}</a>
+        {FooterItem({ text: "All images are AI generated." })}
+        {FooterItem({ text: "© Jonas Persson 2026" })}
+        <a href="/about">{FooterItem({ text: "About this page" })}</a>
       </ul>
     </footer>
   );
 });
 
-export const FooterItem = (text: string) => {
-  return <li class={styles.footerItem}>{text}</li>;
+export const FooterItem = (props: { text: string }) => {
+  return <li class={styles.footerItem}>{props.text}</li>;
 };

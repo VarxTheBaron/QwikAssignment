@@ -8,8 +8,9 @@
   gap: 0.5rem;
   align-items: center;
 
-  margin-bottom: 0.25rem;
   padding: 0.25rem;
+
+  background: linear-gradient(0.25turn, #272727, #343434, #272727);
 }
 
 .navigation {

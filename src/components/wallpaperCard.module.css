@@ -1,0 +1,26 @@
+.wallpaperCard {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 3 / 2;
+
+  border: 0.0625rem solid var(--mediumBorderColor);
+  border-radius: 1rem;
+
+  overflow: hidden;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.wallpaperCardImage {
+  display: block;
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wallpaperCard:hover {
+  box-shadow: 0 0 0.25rem 0.25rem var(--primaryColor);
+}

@@ -1,0 +1,10 @@
+.wallpaperGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  width: calc(100% - 2rem);
+  max-width: 1080px;
+
+  gap: 1rem;
+  margin: 1rem 1rem;
+}

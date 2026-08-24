@@ -7,7 +7,7 @@ export default component$(() => {
       <ul class={styles.footerList}>
         {FooterItem("All images are AI generated.")}
         {FooterItem("© Jonas Persson 2026")}
-        <a href="./about">{FooterItem("About this page")}</a>
+        <a href="/about">{FooterItem("About this page")}</a>
       </ul>
     </footer>
   );

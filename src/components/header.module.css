@@ -10,7 +10,12 @@
 
   padding: 0.25rem;
 
-  background: linear-gradient(0.25turn, #272727, #343434, #272727);
+  background: linear-gradient(
+    0.25turn,
+    var(--primaryUiColor),
+    var(--secondaryUiColor),
+    var(--primaryUiColor)
+  );
 }
 
 .navigation {

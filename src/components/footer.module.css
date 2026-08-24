@@ -2,30 +2,31 @@
   background-color: rgba(0, 0, 0, 0.025);
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 1px var(--boxShadowColor) inset;
+
   width: fit-content;
-  height: fit-content;
-  margin: 0 auto;
+  position: relative;
+
+  margin: -7rem auto 0;
 }
 
 .footerList {
   list-style-type: none;
-  padding: 0;
+  padding: 0 1rem;
   margin: 0.25rem 0;
+
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
-  flex-wrap: nowrap;
-}
+  justify-content: space-evenly;
+  gap: 1rem;
 
-.footerList:last-child {
-  padding-right: 1rem;
-}
-
-.footerItem {
-  padding-left: 1rem;
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
+  .footerContainer {
+    margin: -3rem auto 0;
+  }
+
   .footerList {
     flex-direction: row;
   }

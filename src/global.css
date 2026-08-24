@@ -4,11 +4,16 @@
   --primaryTextColor: rgb(255, 255, 255);
 
   --primaryBorderColor: rgb(0, 0, 0);
+  --mediumBorderColor: rgba(0, 0, 0, 0.5);
   --transparentBorderColor: rgba(0, 0, 0, 0.1);
 
   --boxShadowColor: rgba(0, 0, 0, 0.25);
 
   --backgroundColor: rgb(20, 20, 20);
+
+  --primaryUiColor: rgb(40, 40, 40);
+  --secondaryUiColor: rgb(60, 60, 60);
+  --tertiaryUiColor: rgb(80, 80, 80);
 }
 
 * {
@@ -18,7 +23,6 @@
 }
 
 main {
-  /* background-color: var(--backgroundColor); */
   padding-bottom: 7rem;
 }
 

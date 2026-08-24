@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 
 export default component$(() => {
   return (
-    <div>
+    <nav>
       <a href="/">
         <img src="/wallpapersLogoSmall.png" alt="Company Logo" />
       </a>
@@ -15,6 +15,6 @@ export default component$(() => {
           <span>Random</span>
         </a>
       </div>
-    </div>
+    </nav>
   );
 });

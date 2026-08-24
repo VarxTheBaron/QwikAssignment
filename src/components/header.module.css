@@ -1,5 +1,24 @@
 .headerContainer {
-    border-bottom: 1px solid var(--primaryBorderColor);
-    position: sticky;
-    top: 0;
+  border-bottom: 0.0625rem solid var(--primaryBorderColor);
+  position: sticky;
+  top: 0;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .headerContainer {
+    grid-template-columns: 1fr auto 1fr;
+  }
 }

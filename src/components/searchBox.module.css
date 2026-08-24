@@ -1,0 +1,27 @@
+.searchBoxContainer {
+  border: 0.0625rem solid var(--primaryBorderColor);
+  box-shadow: 0.125rem 0.125rem var(--boxShadowColor) inset;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+
+.searchBoxContainer form,
+.searchBoxContainer button,
+.searchBoxContainer input {
+  border: none;
+  background-color: transparent;
+}
+
+.searchField {
+  width: 10rem;
+  height: 1.5rem;
+}
+
+.searchBoxContainer input:focus {
+  outline: none;
+}
+
+.searchBoxContainer:focus-within {
+  border-color: var(--primaryColor);
+  box-shadow: 0 0 0.125rem 0.125rem var(--primaryColor);
+}

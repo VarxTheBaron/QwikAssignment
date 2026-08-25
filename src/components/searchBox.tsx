@@ -11,7 +11,9 @@ export default component$(() => {
           name="q"
           placeholder="Search..."
         />
-        <button type="submit">🔍</button>
+        <button type="submit" class={styles.searchBoxMagnifyingGlass}>
+          🔍
+        </button>
       </form>
     </div>
   );

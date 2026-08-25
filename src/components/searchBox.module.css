@@ -25,3 +25,7 @@
   border-color: var(--primaryColor);
   box-shadow: 0 0 0.125rem 0.125rem var(--primaryColor);
 }
+
+.searchBoxMagnifyingGlass:hover {
+  cursor: pointer;
+}

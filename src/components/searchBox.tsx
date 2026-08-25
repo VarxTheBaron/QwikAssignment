@@ -5,13 +5,19 @@ export default component$(() => {
   return (
     <div class={styles.searchBoxContainer}>
       <form action="/search" method="GET">
+        <label for="search">Search:</label>
         <input
+          id="search"
           class={styles.searchField}
           type="search"
           name="q"
-          placeholder="Search..."
+          placeholder="Category or title"
         />
-        <button type="submit" class={styles.searchBoxMagnifyingGlass}>
+        <button
+          type="submit"
+          class={styles.searchBoxMagnifyingGlass}
+          aria-label="Search"
+        >
           🔍
         </button>
       </form>

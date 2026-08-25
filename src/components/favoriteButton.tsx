@@ -15,7 +15,11 @@ export default component$((props: favoriteButtonProps) => {
 
   return (
     <button
+      type="button"
       class={style.button}
+      aria-label={
+        isFavorite ? "Remove from favorites list" : "Add to favorites list"
+      }
       onClick$={() => {
         isFavorite.value = toggleFavorite(props.wallpaperId);
       }}

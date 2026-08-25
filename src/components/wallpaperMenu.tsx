@@ -10,6 +10,7 @@ export default component$((props: { wallpaper: Wallpaper }) => {
       <h1 class={styles.menuItem}>Image title: {props.wallpaper.title}</h1>
       <p class={styles.menuItem}>Category: {props.wallpaper.category}</p>
       <FavoriteButton wallpaperId={props.wallpaper.id} />
+      <div class={styles.divider}></div>
       <WallpaperFooter />
     </aside>
   );

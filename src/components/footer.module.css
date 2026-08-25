@@ -1,7 +1,6 @@
 .footerContainer {
-  background-color: rgba(0, 0, 0, 0.025);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 2px 1px var(--boxShadowColor) inset;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0.125rem 0.125rem 0.0625rem var(--boxShadowColor) inset;
 
   width: fit-content;
   position: relative;

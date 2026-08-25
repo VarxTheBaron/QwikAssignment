@@ -9,7 +9,7 @@ export default component$((props: { wallpaper: Wallpaper }) => {
         <img
           class={styles.wallpaperCardImage}
           src={props.wallpaper.imageURL}
-          alt={`Image category: ${props.wallpaper.category}`}
+          alt={`Title: ${props.wallpaper.title}, category: ${props.wallpaper.category}`}
         />
       </a>
     </article>

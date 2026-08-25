@@ -5,5 +5,9 @@ export function getFavoriteStatus(id: number): boolean {
 }
 
 export function getFavorites(): number[] {
-  return JSON.parse(localStorage.getItem(favoritesKey) ?? "[]");
+  try {
+    return JSON.parse(localStorage.getItem(favoritesKey) ?? "[]");
+  } catch {
+    return [];
+  }
 }

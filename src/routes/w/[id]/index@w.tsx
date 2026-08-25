@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import styles from "./index.module.css";
 import WallpaperMenu from "../../../components/wallpaperMenu";
-import { allWallpapers, Wallpaper } from "~/data/wallpapers";
+import { allWallpapers, type Wallpaper } from "~/data/wallpapers";
 
 export default component$(() => {
   const currentLocation = useLocation();

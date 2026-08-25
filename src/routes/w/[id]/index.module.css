@@ -1,8 +1,24 @@
 .main {
-  margin: 1rem;
+  margin: 1rem 1rem 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
 }
 
 .displayedImage {
   max-width: 100%;
   max-height: 100%;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin: 0 1rem 0 0;
+    grid-template-columns: 20rem auto;
+    grid-template-rows: auto;
+  }
+
+  .displayedImage {
+    margin-top: 1rem;
+  }
 }

@@ -8,7 +8,10 @@ export default component$(() => {
   return (
     <main class={styles.main}>
       <Greeter />
-      <WallpaperGrid wallpapers={startPageWallpapers()} />
+      <WallpaperGrid
+        wallpapers={startPageWallpapers()}
+        title="Featured wallpapers"
+      />
       <InfoCard
         title="Wallpaper stats"
         text="

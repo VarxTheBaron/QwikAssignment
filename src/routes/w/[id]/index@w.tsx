@@ -10,12 +10,7 @@ export default component$(() => {
 
   const wp: Wallpaper = allWallpapers[id - 1];
 
-  const image = (
-    <img
-      src={`/wallpapers/wall${currentLocation.params.id}.png`}
-      class={styles.displayedImage}
-    />
-  );
+  const image = <img src={wp.imageURL} class={styles.displayedImage} />;
 
   return (
     <main class={styles.main}>

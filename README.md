@@ -3,10 +3,48 @@
 **Namn:** Jonas Persson
 **Kurs:** Webbutveckling
 **Valt ramverk:** Qwik
-**Repository:** Länk kommer
+**Repository:** [Länk](https://github.com/VarxTheBaron/QwikAssignment)
 
 ## Om detta projekt
-Detta är en enkelt webbapplikation byggd med **Qwik**. Appen är skapad som en del av kursen Webbutveckling där syftet är att lära sig om ett valfritt modernt frontend-ramverk.
+
+Detta projekt är en webbapplikation byggd med **Qwik** för att visa och utforska bakgrundsbilder. Användaren kan bläddra bland bilder, öppna en specifik bild och lägga till bakgrundsbilder som favoriter. Favoriter sparas lokalt i webbläsaren med **localStorage**.
+
+Inspirationen för hemsidan är [Wallhaven](https://wallhaven.cc/)
+
+### Funktioner
+
+- Visa bakgrundsbilder i ett grid
+- Öppna enskilda bakgrundsbilder via dynamisk routing
+- Visa information om varje bakgrundsbild
+- Favoritmarkera bakgrundsbilder
+- Spara favoriter i **localStorage**
+- Responsiv design för mobil och desktop
+
+### Teknik
+
+- Qwik
+- TypeScript
+- CSS Modules
+- Qwik City
+- localStorage
+
+## Projektstruktur
+
+- `src/routes/` - Qwik City routes
+- `src/routes/w/[id]/` - Sida för specifika bakgrundsbilder
+- `src/components/` - komponenter
+- `src/data/` - bakgrundsbildsdata och logik för favoriter
+
+## Installation
+
+Installera projektets beroenden:
+```bash
+npm install
+```
+Kör projektet:
+```bash
+npm run start
+```
 
 ---
 
@@ -31,17 +69,17 @@ Utöver att en bygga en hemsida utifrån bilden ovan i det valda ramverket ska d
 
 Här är en lista på de delar du ska välja att använda i din projekt För G. Minst 4 av 7 delar.
 
-- [ ] Databindning
-- [ ] Villkorlig rendering
-- [ ] Loop rendering
-- [ ] Klass- och stilbindning
-- [ ] Tillståndshantering
-- [ ] Eventhantering
-- [ ] Komponenter
+- [x] Databindning
+- [x] Villkorlig rendering
+- [x] Loop rendering
+- [x] Klass- och stilbindning
+- [x] Tillståndshantering
+- [x] Eventhantering
+- [x] Komponenter
 
 För VG ska du använda samtliga ovan och även lägga till routing i projektet.
 
-- [ ] Klient-routing
+- [x] Klient-routing
 
 OBS: Du ska ha med samtliga punkter i din presentation och förklara hur du har använt det och hur det fungerar.
 
@@ -66,17 +104,17 @@ Totalt: ca 10-15 min.
 ### Krav för Godkänt
 
 - [ ] Uppgiften har lämnats in i tid (Kod & Presentation).
-- [ ] Koden innehåller en renskriven Readmefil.
-- [ ] Git och GitHub har använts (med regelbunda commits).
-- [ ] Sidan innehåller semantisk HTML och är responsiv.
-- [ ] Minst fyra av de sju punkterna från listan ovan har används i din kod
+- [x] Koden innehåller en renskriven Readmefil.
+- [x] Git och GitHub har använts (med regelbunda commits).
+- [x] Sidan innehåller semantisk HTML och är responsiv.
+- [x] Minst fyra av de sju punkterna från listan ovan har används i din kod
 - [ ] Under "Hur det tekniskt fungerar" i din presentation förklarar du de delar du använt.
 
 _Gjorda krav ska kryssas för._
 
 ### Krav för Väl Godkänt
 
-- [ ] Samtliga punkter ifrån listan ovan används inklusive klient-routing.
+- [x] Samtliga punkter ifrån listan ovan används inklusive klient-routing.
 - [ ] Under "Hur det tekniskt fungerar" i din presentation förklarar du alla delarna.
 - [ ] Under presentationstillfället ska du vara med och ställa frågor om det presenterade ramverken.
 

@@ -1,4 +1,9 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import {
+  favoritesKey,
+  getFavorites,
+  getFavoriteStatus,
+} from "~/data/favorites";
 import style from "./favoriteButton.module.css";
 
 export default component$((props: favoriteButtonProps) => {
@@ -24,18 +29,16 @@ export type favoriteButtonProps = {
   wallpaperId: number;
 };
 
-function toggleFavorite(id: number) {
-  const currentStatus: boolean = getFavoriteStatus(id);
+function toggleFavorite(id: number): boolean {
+  const favorites: number[] = getFavorites();
 
-  if (!currentStatus) {
-    localStorage.setItem(String(id), "favorited");
-    return true;
-  } else {
-    localStorage.removeItem(String(id));
+  if (favorites.includes(id)) {
+    const updatedFavorites = favorites.filter((fav) => fav !== id);
+    localStorage.setItem(favoritesKey, JSON.stringify(updatedFavorites));
     return false;
+  } else {
+    favorites.push(id);
+    localStorage.setItem(favoritesKey, JSON.stringify(favorites));
+    return true;
   }
-}
-
-function getFavoriteStatus(id: number): boolean {
-  return localStorage.getItem(String(id)) !== null;
 }

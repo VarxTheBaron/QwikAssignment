@@ -1,3 +1,7 @@
 .button {
   width: fit-content;
+  font-size: xx-large;
+  background: none;
+  border: 0;
+  cursor: pointer;
 }

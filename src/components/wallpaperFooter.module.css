@@ -1,2 +1,16 @@
 .footer {
+  margin: 0.25rem;
+  padding: 0.25rem;
+  border: 0.0625rem solid var(--contrastBorderColor);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
 }

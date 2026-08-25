@@ -1,5 +1,16 @@
 import { component$ } from "@builder.io/qwik";
+import styles from "./wallpaperFooter.module.css";
 
 export default component$(() => {
-  return <p>wallpaper footer text</p>;
+  return (
+    <footer class={styles.footer}>
+      {WallpaperFooterItem({ text: "All images are AI generated." })}
+      {WallpaperFooterItem({ text: "© Jonas Persson 2026" })}
+      <a href="/about">{WallpaperFooterItem({ text: "About this page" })}</a>
+    </footer>
+  );
 });
+
+export const WallpaperFooterItem = (props: { text: string }) => {
+  return <span>{props.text}</span>;
+};

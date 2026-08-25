@@ -3,6 +3,7 @@
   box-shadow: 0.125rem 0.125rem var(--boxShadowColor) inset;
   border-radius: 0.25rem;
   padding: 0.25rem;
+  min-width: 0;
 }
 
 .searchBoxContainer form,
@@ -13,7 +14,8 @@
 }
 
 .searchField {
-  width: 10rem;
+  width: 100%;
+  min-width: 0;
   height: 1.5rem;
 }
 
@@ -28,4 +30,10 @@
 
 .searchBoxMagnifyingGlass:hover {
   cursor: pointer;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }

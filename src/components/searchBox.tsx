@@ -4,7 +4,7 @@ import styles from "./searchBox.module.css";
 export default component$(() => {
   return (
     <div class={styles.searchBoxContainer}>
-      <form action="/search" method="GET">
+      <form action="/search" method="GET" class={styles.form}>
         <label for="search">Search:</label>
         <input
           id="search"

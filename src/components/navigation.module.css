@@ -1,4 +1,14 @@
 .navigation {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }

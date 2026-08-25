@@ -6,8 +6,8 @@ import WallpaperFooter from "./wallpaperFooter";
 export default component$((props: { wallpaper: Wallpaper }) => {
   return (
     <aside class={styles.wallpaperMenu}>
-      <h1>Image title: {props.wallpaper.title}</h1>
-      <p>Category: {props.wallpaper.category}</p>
+      <h1 class={styles.menuItem}>Image title: {props.wallpaper.title}</h1>
+      <span class={styles.menuItem}>Category: {props.wallpaper.category}</span>
       <WallpaperFooter />
     </aside>
   );

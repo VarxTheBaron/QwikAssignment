@@ -10,12 +10,14 @@ export default component$(() => {
 
   const wp: Wallpaper = allWallpapers[id - 1];
 
-  const image = <img src={wp.imageURL} class={styles.displayedImage} />;
-
   return (
     <main class={styles.main}>
-      <WallpaperMenu wallpaper={wp} />
-      {image}
+      <WallpaperMenu wallpaper={wp} />{" "}
+      <img
+        src={wp.imageURL}
+        class={styles.displayedImage}
+        alt={`Title: ${wp.title}, category: ${wp.category}`}
+      />
     </main>
   );
 });

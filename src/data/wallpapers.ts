@@ -62,7 +62,7 @@ export const allWallpapers: Wallpaper[] = [
     id: 7,
     title: "wall007",
     imageURL: "/wallpapers/wall007.webp",
-    category: "abstract",
+    category: "dark",
   },
   {
     id: 8,

@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import Accordion from "~/components/accordion";
 import styles from "./index.module.css";
 import InfoCard from "~/components/infoCard";
+import { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -65,3 +66,13 @@ export default component$(() => {
     </main>
   );
 });
+
+export const head: DocumentHead = {
+  title: "About - Awesome Wallpapers",
+  meta: [
+    {
+      name: "description",
+      content: "Information about the website.",
+    },
+  ],
+};

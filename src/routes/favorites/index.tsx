@@ -3,6 +3,7 @@ import styles from "./index.module.css";
 import WallpaperGrid from "~/components/wallpaperGrid";
 import { getFavoriteWallpapers } from "~/data/favorites";
 import { type Wallpaper } from "~/data/wallpapers";
+import { DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const favoriteWallpapers = useSignal<Wallpaper[]>([]);
@@ -22,3 +23,13 @@ export default component$(() => {
     </main>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Favorites - Awesome Wallpapers",
+  meta: [
+    {
+      name: "description",
+      content: "View your favorited awesome wallpapers.",
+    },
+  ],
+};

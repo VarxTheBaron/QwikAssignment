@@ -1,8 +1,16 @@
 import { component$ } from "@builder.io/qwik";
-import { useLocation } from "@builder.io/qwik-city";
+import {
+  type DocumentHead,
+  routeLoader$,
+  useLocation,
+} from "@builder.io/qwik-city";
 import styles from "./index.module.css";
 import WallpaperMenu from "../../../components/wallpaperMenu";
-import { allWallpapers, type Wallpaper } from "~/data/wallpapers";
+import {
+  allWallpapers,
+  getWallpaperById,
+  type Wallpaper,
+} from "~/data/wallpapers";
 
 export default component$(() => {
   const currentLocation = useLocation();
@@ -21,3 +29,22 @@ export default component$(() => {
     </main>
   );
 });
+
+export const useWallpaper = routeLoader$(async (requestEvent) => {
+  const id = requestEvent.params.id;
+  const wp = getWallpaperById(Number(id));
+  return wp;
+});
+
+export const head: DocumentHead = ({ resolveValue }) => {
+  const wp = resolveValue(useWallpaper);
+  return {
+    title: `${wp.title} - Awesome Wallpapers`,
+    meta: [
+      {
+        name: "description",
+        content: wp.category,
+      },
+    ],
+  };
+};

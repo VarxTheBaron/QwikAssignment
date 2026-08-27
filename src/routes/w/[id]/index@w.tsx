@@ -43,7 +43,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
     meta: [
       {
         name: "description",
-        content: wp.category,
+        content: `Page for specific wallpaper: ${wp.title}, category: ${wp.category}`,
       },
     ],
   };

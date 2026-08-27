@@ -103,19 +103,19 @@ Totalt: ca 10-15 min.
 
 ### Krav för Godkänt
 
-- [ ] Uppgiften har lämnats in i tid (Kod & Presentation).
+- [x] Uppgiften har lämnats in i tid (Kod & Presentation).
 - [x] Koden innehåller en renskriven Readmefil.
 - [x] Git och GitHub har använts (med regelbunda commits).
 - [x] Sidan innehåller semantisk HTML och är responsiv.
 - [x] Minst fyra av de sju punkterna från listan ovan har används i din kod
-- [ ] Under "Hur det tekniskt fungerar" i din presentation förklarar du de delar du använt.
+- [x] Under "Hur det tekniskt fungerar" i din presentation förklarar du de delar du använt.
 
 _Gjorda krav ska kryssas för._
 
 ### Krav för Väl Godkänt
 
 - [x] Samtliga punkter ifrån listan ovan används inklusive klient-routing.
-- [ ] Under "Hur det tekniskt fungerar" i din presentation förklarar du alla delarna.
-- [ ] Under presentationstillfället ska du vara med och ställa frågor om det presenterade ramverken.
+- [x] Under "Hur det tekniskt fungerar" i din presentation förklarar du alla delarna.
+- [x] Under presentationstillfället ska du vara med och ställa frågor om det presenterade ramverken.
 
 _Gjorda krav ska kryssas för._

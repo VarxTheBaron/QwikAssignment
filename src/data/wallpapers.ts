@@ -9,7 +9,7 @@ export const startPageWallpapers = () => allWallpapers.slice(0, 10);
 
 export function searchWallpapers(query: string): Wallpaper[] {
   return allWallpapers.filter(
-    (wp) => wp.category === query || wp.title === query,
+    (wp) => wp.category.includes(query) || wp.title.includes(query),
   );
 }
 

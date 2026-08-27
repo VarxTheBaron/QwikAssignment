@@ -7,6 +7,12 @@ export type Wallpaper = {
 
 export const startPageWallpapers = () => allWallpapers.slice(0, 10);
 
+export function searchWallpapers(query: string): Wallpaper[] {
+  return allWallpapers.filter(
+    (wp) => wp.category === query || wp.title === query,
+  );
+}
+
 export function getWallpaperById(id: number) {
   return allWallpapers[id - 1];
 }

@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import styles from "./index.module.css";
 import WallpaperGrid from "~/components/wallpaperGrid";
 import { startPageWallpapers } from "~/data/wallpapers";
+import InfoCard from "~/components/infoCard";
 
 export default component$(() => {
   return (
@@ -29,15 +30,6 @@ export const head: DocumentHead = {
 
 export const Greeter = () => {
   return <h1 class={styles.greeter}>The best wallpapers ever!</h1>;
-};
-
-export const InfoCard = (props: { title: string; text: string }) => {
-  return (
-    <section class={styles.statsInfo}>
-      <h2>{props.title}</h2>
-      <p>{props.text}</p>
-    </section>
-  );
 };
 
 export const text: string =

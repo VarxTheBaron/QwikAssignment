@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./footer.module.css";
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -8,7 +9,7 @@ export default component$(() => {
         <FooterItem text="All images are AI generated." />
         <FooterItem text="© Jonas Persson 2026" />
         <li class={styles.footerItem}>
-          <a href="/about">About this page</a>
+          <Link href="/about">About this page</Link>
         </li>
       </ul>
     </footer>

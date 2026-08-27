@@ -1,14 +1,15 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./navigation.module.css";
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
     <nav class={styles.navigation}>
-      <a href="/">
+      <Link href="/">
         <img src="/wallpapersLogoSmall.png" alt="Awesome wallpapers home" />
-      </a>
-      <a href="/favorites">Favorites</a>
-      <a href="/random">Random</a>
+      </Link>
+      <Link href="/favorites">Favorites</Link>
+      <Link href="/random">Random</Link>
     </nav>
   );
 });

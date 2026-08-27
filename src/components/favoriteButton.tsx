@@ -6,7 +6,7 @@ import {
 } from "~/data/favorites";
 import style from "./favoriteButton.module.css";
 
-export default component$((props: favoriteButtonProps) => {
+export default component$((props: FavoriteButtonProps) => {
   const isFavorite = useSignal(false);
 
   useVisibleTask$(({ track }) => {
@@ -30,9 +30,9 @@ export default component$((props: favoriteButtonProps) => {
   );
 });
 
-export type favoriteButtonProps = {
+interface FavoriteButtonProps {
   wallpaperId: number;
-};
+}
 
 function toggleFavorite(id: number): boolean {
   const favorites: number[] = getFavorites();

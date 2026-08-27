@@ -8,21 +8,27 @@ interface Props {
 export default component$((props: Props) => {
   const isOpen = useSignal<boolean>(false);
 
-  console.log(isOpen.value);
-
   return (
-    <section>
+    <section class={styles.section}>
       <header
-        onClick$={() => {
-          isOpen.value = !isOpen.value;
-          console.log(isOpen.value);
-        }}
+        onClick$={() => (isOpen.value = !isOpen.value)}
         class={styles.header}
       >
         {props.title}
-        <span>❯</span>
+        <span
+          class={[
+            styles.accordionIcon,
+            isOpen.value && styles.accordionIconOpen,
+          ]}
+        >
+          ❯
+        </span>
       </header>
-      {isOpen.value && <Slot />}
+      {isOpen.value && (
+        <div class={styles.content}>
+          <Slot />
+        </div>
+      )}
     </section>
   );
 });

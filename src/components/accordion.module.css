@@ -1,4 +1,34 @@
+.section {
+  background-color: var(--primaryUiColor);
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+  display: grid;
+}
+
 .header {
-  background: pink;
   user-select: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem;
+
+  font-weight: 600;
+}
+
+.content {
+  padding: 1rem 0.5rem 0.5rem;
+}
+
+.accordionIcon {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.accordionIconOpen {
+  transform-origin: center;
+  transform: rotate(90deg);
 }

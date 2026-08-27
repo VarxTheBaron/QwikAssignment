@@ -21,10 +21,10 @@ export default component$((props: { wallpaper: Wallpaper }) => {
         onFavoriteToggle$={onFavoriteStatusChange}
       />
       {favorited.value && (
-        <div>
+        <p>
           You can go to your <Link href="/favorites">Favorites</Link> to view
           this and all your other favorites.
-        </div>
+        </p>
       )}
       <div class={styles.divider}></div>
       <WallpaperFooter />

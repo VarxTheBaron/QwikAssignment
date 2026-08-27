@@ -1,4 +1,9 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import {
+  component$,
+  PropFunction,
+  useSignal,
+  useVisibleTask$,
+} from "@builder.io/qwik";
 import {
   favoritesKey,
   getFavorites,
@@ -19,10 +24,13 @@ export default component$((props: FavoriteButtonProps) => {
       type="button"
       class={style.button}
       aria-label={
-        isFavorite ? "Remove from favorites list" : "Add to favorites list"
+        isFavorite.value
+          ? "Remove from favorites list"
+          : "Add to favorites list"
       }
       onClick$={() => {
         isFavorite.value = toggleFavorite(props.wallpaperId);
+        props.onFavoriteToggle$(isFavorite.value);
       }}
     >
       {isFavorite.value ? "❤️" : "🤍"}
@@ -32,6 +40,7 @@ export default component$((props: FavoriteButtonProps) => {
 
 interface FavoriteButtonProps {
   wallpaperId: number;
+  onFavoriteToggle$: PropFunction<(newStatus: boolean) => void>;
 }
 
 function toggleFavorite(id: number): boolean {

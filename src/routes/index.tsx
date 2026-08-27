@@ -13,7 +13,9 @@ export default component$(() => {
         wallpapers={startPageWallpapers()}
         title="Featured wallpapers"
       />
-      <InfoCard title="Wallpaper stats" text={text} />
+      <div class={styles.infoCard}>
+        <InfoCard title="Wallpaper stats" text={text} />
+      </div>
     </main>
   );
 });

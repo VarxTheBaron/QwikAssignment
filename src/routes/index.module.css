@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.infoCard {
+  max-width: 1080px;
+}
+
 .greeter {
   margin: 0 1rem;
 }

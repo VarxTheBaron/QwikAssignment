@@ -7,6 +7,10 @@ export type Wallpaper = {
 
 export const startPageWallpapers = () => allWallpapers.slice(0, 10);
 
+export function getWallpaperById(id: number) {
+  return allWallpapers[id - 1];
+}
+
 export function getRandomWallpaper(): Wallpaper {
   return allWallpapers[Math.floor(Math.random() * allWallpapers.length)];
 }

@@ -9,8 +9,9 @@ import style from "./favoriteButton.module.css";
 export default component$((props: favoriteButtonProps) => {
   const isFavorite = useSignal(false);
 
-  useVisibleTask$(() => {
-    isFavorite.value = getFavoriteStatus(props.wallpaperId);
+  useVisibleTask$(({ track }) => {
+    const wallpaperId = track(() => props.wallpaperId);
+    isFavorite.value = getFavoriteStatus(wallpaperId);
   });
 
   return (

@@ -11,7 +11,11 @@ export default component$(() => {
       <form
         preventdefault:submit
         class={styles.form}
-        onSubmit$={() => navigate(`/search?q=${formState.query}`)}
+        onSubmit$={() =>
+          navigate(
+            encodeURI(`/search?q=${encodeURIComponent(formState.query)}`),
+          )
+        }
       >
         <label for="search">Search:</label>
         <input

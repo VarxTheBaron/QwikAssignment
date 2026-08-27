@@ -6,17 +6,13 @@ import {
 } from "@builder.io/qwik-city";
 import styles from "./index.module.css";
 import WallpaperMenu from "../../../components/wallpaperMenu";
-import {
-  allWallpapers,
-  getWallpaperById,
-  type Wallpaper,
-} from "~/data/wallpapers";
+import { getWallpaperById, type Wallpaper } from "~/data/wallpapers";
 
 export default component$(() => {
   const currentLocation = useLocation();
   const id = Number(currentLocation.params.id);
 
-  const wp: Wallpaper = allWallpapers[id - 1];
+  const wp: Wallpaper = getWallpaperById(id);
 
   return (
     <main class={styles.main}>

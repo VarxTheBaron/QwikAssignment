@@ -1,32 +1,30 @@
 import { component$ } from "@builder.io/qwik";
-import {
-  type DocumentHead,
-  routeLoader$,
-  useLocation,
-} from "@builder.io/qwik-city";
+import { type DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
 import styles from "./index.module.css";
 import WallpaperMenu from "../../../components/wallpaperMenu";
-import { getWallpaperById, type Wallpaper } from "~/data/wallpapers";
+import { getWallpaperById } from "~/data/wallpapers";
 
 export default component$(() => {
-  const currentLocation = useLocation();
-  const id = Number(currentLocation.params.id);
-
-  const wp: Wallpaper = getWallpaperById(id);
+  const wp = useWallpaper();
 
   return (
     <main class={styles.main}>
-      <WallpaperMenu wallpaper={wp} />{" "}
-      <img
-        src={wp.imageURL}
-        class={styles.displayedImage}
-        alt={`Title: ${wp.title}, category: ${wp.category}`}
-      />
+      {wp.value && (
+        <>
+          <WallpaperMenu wallpaper={wp.value} />
+          <img
+            src={wp.value.imageURL}
+            class={styles.displayedImage}
+            alt={`Title: ${wp.value.title}, category: ${wp.value.category}`}
+          />
+        </>
+      )}
+      {!wp.value && <p>No wallpaper found...</p>}
     </main>
   );
 });
 
-export const useWallpaper = routeLoader$(async (requestEvent) => {
+export const useWallpaper = routeLoader$((requestEvent) => {
   const id = requestEvent.params.id;
   const wp = getWallpaperById(Number(id));
   return wp;
@@ -34,6 +32,19 @@ export const useWallpaper = routeLoader$(async (requestEvent) => {
 
 export const head: DocumentHead = ({ resolveValue }) => {
   const wp = resolveValue(useWallpaper);
+
+  if (!wp) {
+    return {
+      title: `Wallpaper not found - Awesome Wallpapers`,
+      meta: [
+        {
+          name: "description",
+          content: `The requested wallpaper could not be found.`,
+        },
+      ],
+    };
+  }
+
   return {
     title: `${wp.title} - Awesome Wallpapers`,
     meta: [

@@ -1,3 +1,5 @@
+import { allWallpapers, type Wallpaper } from "./wallpapers";
+
 export const favoritesKey: string = "favorites";
 
 export function getFavoriteStatus(id: number): boolean {
@@ -10,4 +12,10 @@ export function getFavorites(): number[] {
   } catch {
     return [];
   }
+}
+
+export function getFavoriteWallpapers(): Wallpaper[] {
+  const favoriteIds = getFavorites();
+
+  return allWallpapers.filter((wp) => favoriteIds.includes(wp.id));
 }
